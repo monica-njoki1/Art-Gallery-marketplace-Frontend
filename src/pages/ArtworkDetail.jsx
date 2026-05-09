@@ -46,7 +46,8 @@ function ArtworkDetail() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate("/purchases");
+        navigate(`/purchases?artworkId=${art.id}`);
+
       })
       .catch((err) => console.error("Error adding to cart:", err));
   };

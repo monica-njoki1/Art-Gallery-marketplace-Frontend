@@ -4,7 +4,8 @@ import { useSearchParams } from "react-router-dom";
 import { usePaystackPayment } from "react-paystack";
 
 const API = "https://art-gallery-marketplace-backend.onrender.com";
-const PAYSTACK_PUBLIC_KEY = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY;
+const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
+
 
 // ─── Helper: get logged-in user from localStorage ────────────────────────────
 function getUser() {
